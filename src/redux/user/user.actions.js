@@ -20,7 +20,7 @@ export const emailSignInStart = emailAndPassword => ({
 });
 
 export const checkUserSession = () => ({
-  type: UserActionTypes.CHEK_USER_SESSION
+  type: UserActionTypes.CHECK_USER_SESSION
 });
 
 export const signOutStart = () => ({

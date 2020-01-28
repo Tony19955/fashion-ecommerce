@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { auth } from '../../firebase/firebase.utils';
 import { createStructuredSelector } from 'reselect';
 
 import CartIcon from '../cart-icon/cart-icon.component';
@@ -10,6 +9,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { signOutStart } from '../../redux/user/user.actions';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg'
+
 import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink } from './header.styles';
 
 const Header = ({ currentUser, hidden, signOutStart }) => (
