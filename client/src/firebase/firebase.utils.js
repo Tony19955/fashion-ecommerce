@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-const config = {  
+var config = {
   apiKey: "AIzaSyDRrT_aRp9Xkcv4nYeeXlqeb0yP-h9DIZs",
   authDomain: "crwn-db-fb82d.firebaseapp.com",
   databaseURL: "https://crwn-db-fb82d.firebaseio.com",
@@ -10,7 +10,7 @@ const config = {
   storageBucket: "crwn-db-fb82d.appspot.com",
   messagingSenderId: "255582018699",
   appId: "1:255582018699:web:227ad38e45a3f54e59088e",
-  measurementId: "G-YNPTSMEFJY"  
+  measurementId: "G-YNPTSMEFJY"
 };
 
 firebase.initializeApp(config);
