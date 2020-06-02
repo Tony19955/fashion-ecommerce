@@ -14,7 +14,7 @@ const SignUp = ({ signUpStart }) => {
     email: '',
     password: '',
     confirmPassword: ''
-  })
+  });
 
   const { displayName, email, password, confirmPassword } = userCredentials;
 
@@ -22,7 +22,7 @@ const SignUp = ({ signUpStart }) => {
     event.preventDefault();
 
     if (password !== confirmPassword) {
-      alert("Passwords don't match");
+      alert("passwords don't match");
       return;
     }
 
@@ -32,9 +32,9 @@ const SignUp = ({ signUpStart }) => {
   const handleChange = event => {
     const { name, value } = event.target;
 
-    setUserCredentials({...userCredentials, [name]: value });
+    setUserCredentials({ ...userCredentials, [name]: value });
   };
-    
+
   return (
     <SignUpContainer>
       <SignUpTitle>I do not have a account</SignUpTitle>
@@ -76,10 +76,13 @@ const SignUp = ({ signUpStart }) => {
       </form>
     </SignUpContainer>
   );
-}
+};
 
 const mapDispatchToProps = dispatch => ({
   signUpStart: userCredentials => dispatch(signUpStart(userCredentials))
 });
 
-export default connect(null, mapDispatchToProps)(SignUp);
+export default connect(
+  null,
+  mapDispatchToProps
+)(SignUp);
