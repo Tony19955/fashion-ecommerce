@@ -12,19 +12,18 @@ import { GlobalStyle } from './global.styles';
 import { checkUserSession } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 
-import { addCollectionAndDocuments } from './firebase/firebase.utils';
-
-import { selectCollectionsForPreview } from './redux/shop/shop.selectors';
+/*import { addCollectionAndDocuments } from './firebase/firebase.utils';*/
+/*import { selectCollectionsForPreview } from './redux/shop/shop.selectors';*/
 
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
 const SignInAndSignUpPage = lazy(() => import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component'));
 
-const App = ({ checkUserSession, currentUser, collectionsArray }) => {
+const App = ({ checkUserSession, currentUser, /*collectionsArray*/ }) => {
   useEffect(() => {
     checkUserSession();
-    addCollectionAndDocuments('collections', collectionsArray);
+    /*addCollectionAndDocuments('collections', collectionsArray);*/
   }, [checkUserSession]);
 
   return (
@@ -53,7 +52,7 @@ const App = ({ checkUserSession, currentUser, collectionsArray }) => {
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
-  collectionsArray: selectCollectionsForPreview
+  /*collectionsArray: selectCollectionsForPreview*/
 });
 
 const mapDispatchToProps = dispatch => ({
